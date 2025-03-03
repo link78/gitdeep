@@ -1,11 +1,30 @@
-cabal update
-git fetch --all --recurse-submodules --tags
+Making Chicken Bang Bang
 
-git checkout $(curl -s https://api.github.com/repos/IntersectMBO/cardano-node/releases/latest | jq -r .tag_name)
-git checkout $(curl -s https://api.github.com/repos/IntersectMBO/cardano-cli/releases/latest | jq -r .tag_name)
 
-cabal configure -O0 -w ghc-8.10.7
-echo "with-compiler: ghc-8.10.7" >> cabal.project.local
-echo -e "package cardano-crypto-praos\n flags: -external-libsodium-vrf" > cabal.project.local
-cabal build cardano-node cardano-cli
-cabal build cardano-cli
+
+
+    ⅓ cup milk
+
+    1 large egg
+
+    1 pound boneless, skinless chicken breasts, cut into 1-inch cubes
+
+    ¼ cup potato starch
+
+    ¼ cup all-purpose flour
+
+    ½ teaspoon salt
+
+    ¼ teaspoon ground black pepper
+
+    ¼ teaspoon shichimi togarashi (Japanese red pepper condiment)
+
+    2 cups oil for frying, or as needed
+
+    ¼ cup mayonnaise
+
+    2 tablespoons honey
+
+    2 tablespoons sweet chili sauce
+
+    1 teaspoon gochujang (Korean hot pepper paste)
