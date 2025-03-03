@@ -1,0 +1,11 @@
+cabal update
+git fetch --all --recurse-submodules --tags
+
+git checkout $(curl -s https://api.github.com/repos/IntersectMBO/cardano-node/releases/latest | jq -r .tag_name)
+git checkout $(curl -s https://api.github.com/repos/IntersectMBO/cardano-cli/releases/latest | jq -r .tag_name)
+
+cabal configure -O0 -w ghc-8.10.7
+echo "with-compiler: ghc-8.10.7" >> cabal.project.local
+echo -e "package cardano-crypto-praos\n flags: -external-libsodium-vrf" > cabal.project.local
+cabal build cardano-node cardano-cli
+cabal build cardano-cli
